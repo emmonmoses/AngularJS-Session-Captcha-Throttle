@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS $Session & Captcha</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
+  
+  <script src="./controllers/LoginController.js"></script>
+</head>
+
+<body>
+  <form id="form">
+    <div class="form-heading">
+      <h2>AngularJS</h2>
+    </div>
+    <div ng-controller="LoginController">
+      <div class="form-group">
+        <label for="">Username</label>
+        <input type="text" class="form-control" placeholder="Username" ng-model="Username" required/>
+        <label for="">Password</label>
+        <input type="password" class="form-control" placeholder="Password" ng-model="Password" required/>
+        <br/>
+        <button type="submit" class="btn" ng-click="sessionButton()">Session</button>
+        <button type="submit" class="btn" ng-click="captchaButton()">Captcha</button>
+        <button type="submit" class="btn" ng-click="attemptsButton()">Login Attempts</button>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS ReCaptcha</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>;
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular-route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-recaptcha/4.1.5/angular-recaptcha.js"></script>
+  
+  <script src="../controllers/CaptchaController.js"></script>
+</head>
+
+<body ng-init="Captcha()">
+  <div class="container">
+    <form id="form">
+      <div class="form-heading">
+        <h2>Captcha</h2>
+      </div>
+      <div ng-controller="CaptchaController">
+        <div class="form-group">            
+           <input type="text" id="mainCaptcha" class="form-control" ng-model="mainCaptcha" disabled/><br/>          
+          <button type="submit" class="btn" ng-click="Captcha()">Refresh</button>
+          <br/><br/>
+          <input type="text" id="txtInput" class="form-control" placeholder="Type the captcha here" ng-model="captcha"/><br/>          
+          <button type="submit" class="btn" ng-click="ValidCaptcha()">Submit</button>
+          <br/><br/> 
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
