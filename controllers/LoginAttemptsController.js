@@ -3,7 +3,6 @@ var app = angular.module('myApp', ['ngCookies']);
 app.controller('LoginAttemptsController', function ($scope, $cookies, $log, $interval, $timeout, $filter) {
     var counter = 0;
 
-
     $scope.setCookie = function(){
         mycookie = $cookies.getObject('time');
         if(mycookie){
@@ -87,7 +86,6 @@ app.controller('LoginAttemptsController', function ($scope, $cookies, $log, $int
          }, 1000);
     }
   
-
     $scope.countdown = function (minutes,seconds){
         if(minutes == 0 && seconds == 0){
             $interval.cancel(stop);
