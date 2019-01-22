@@ -8,7 +8,7 @@ When a user is idle after some time, a popud dialog modal for the countdown appe
 prompting the user if he needs to continue with the session else, the user is signed out of the app.
 
 # Captcha 
-Am generating random sets of letters, which if it matches your captcha-an alert "true" appears, alert "false" appears.
+Am generating random sets of letters, which if it matches your captcha-an alert "true" appears, else, alert "false" appears.
 
 # Login throttle  
 Am suspending the user for 2 minutes from accessing the login page to the application, after she has made 3 wrong login attempts. 
